@@ -5,7 +5,7 @@ import { ContentsComponent } from './page/contents/contents.component';
 import { ContactComponent } from './page/contact/contact.component';
 import { NotFoundComponent } from './page/not-found/not-found.component';
 import { LayoutComponent } from './components/layout/layout.component';
-
+import { AdminGuard } from './admin.guard'
 
 const routes: Routes = [
   {
@@ -32,8 +32,13 @@ const routes: Routes = [
       ]
   },
   {
+    path: 'auth',
+    loadChildren: () => import('./page/auth/auth.module').then(m => m.AuthModule)
+  },
+  {
     path: 'admin',
-    loadChildren: () => import('./admin/admin.module').then(module => module.AdminModule)
+    canActivate: [AdminGuard],
+    loadChildren: () => import('./page/admin/admin.module').then(module => module.AdminModule)
   },
   {
     path: '**',

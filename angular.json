@@ -108,6 +108,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "test-Frontend:build:production",
+            "firebaseProject": "testfrontend-fbe2b",
+            "firebaseHostingSite": "testfrontend-fbe2b"
+          }
         }
       }
     }

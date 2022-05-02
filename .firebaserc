@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "testfrontend-fbe2b": {
+      "hosting": {
+        "test-Frontend": [
+          "testfrontend-fbe2b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "testfrontend-fbe2b"
+  }
+}
