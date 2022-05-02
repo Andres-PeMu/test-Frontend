@@ -5,6 +5,8 @@ import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
+import { MaterialModule } from '../material/material.module';
+
 
 
 
@@ -19,6 +21,7 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     CommonModule,
+    MaterialModule,
     RouterModule,
   ]
 })
