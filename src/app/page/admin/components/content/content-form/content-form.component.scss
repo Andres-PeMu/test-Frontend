@@ -25,3 +25,14 @@
 .col:last-child {
   margin-right: 0;
 }
+
+.example-card > img{
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.example-form-field {
+  margin-right: 20px;
+}
