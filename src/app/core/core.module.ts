@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 
 
 
+
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   providers: [
     //aqui se ponen los servicios

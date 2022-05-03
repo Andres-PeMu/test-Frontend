@@ -1,9 +1,11 @@
 export interface content{
-  image: string;
-  title: string;
-  description: string;
-  link: string;
-  category: string;
-  creationDate: Date;
-  finisDate: Date;
+  id?: string;
+  image?: string;
+  title?: string;
+  description?: string;
+  detailedDescription?: string;
+  link?: string;
+  category?: string;
+  creationDate?: Date;
+  finisDate?: Date;
 }
