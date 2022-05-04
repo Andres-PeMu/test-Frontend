@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { content } from 'src/app/models/content.models';
+import { Component, OnInit } from '@angular/core'
 import { ContentService } from './../../core/services/content/content.service';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-contents',

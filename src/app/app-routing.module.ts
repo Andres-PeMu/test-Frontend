@@ -4,6 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { ContentsComponent } from './page/contents/contents.component';
 import { ContactComponent } from './page/contact/contact.component';
 import { NotFoundComponent } from './page/not-found/not-found.component';
+import { CotentDetailComponent } from './page/cotent-detail/cotent-detail.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { AdminGuard } from './admin.guard'
 
@@ -24,6 +25,10 @@ const routes: Routes = [
       {
         path: 'contents',
         component: ContentsComponent
+      },
+      {
+        path: 'contents/:id',
+        component: CotentDetailComponent
       },
       {
         path: 'contact',

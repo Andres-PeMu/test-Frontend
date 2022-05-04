@@ -21,10 +21,12 @@ import { ContentsComponent } from './page/contents/contents.component';
 import { ContactComponent } from './page/contact/contact.component';
 import { NotFoundComponent } from './page/not-found/not-found.component';
 import { LayoutComponent } from './components/layout/layout.component';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 
 import { environment } from './../environments/environment';
+import { CotentDetailComponent } from './page/cotent-detail/cotent-detail.component';
 
 
 @NgModule({
@@ -35,6 +37,7 @@ import { environment } from './../environments/environment';
     ContactComponent,
     NotFoundComponent,
     LayoutComponent,
+    CotentDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +54,7 @@ import { environment } from './../environments/environment';
     FormsModule,
     AuthModule,
     MatCardModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
