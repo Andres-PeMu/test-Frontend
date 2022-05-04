@@ -1,11 +1,11 @@
 export interface content{
   id?: string;
-  image?: string;
+  img?: string;
   title?: string;
   description?: string;
   detailedDescription?: string;
   link?: string;
-  category?: string;
+  state?: string;
   creationDate?: Date;
   finisDate?: Date;
 }

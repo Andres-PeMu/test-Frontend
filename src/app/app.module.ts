@@ -23,10 +23,11 @@ import { NotFoundComponent } from './page/not-found/not-found.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { CotentDetailComponent } from './page/cotent-detail/cotent-detail.component';
 
 
 import { environment } from './../environments/environment';
-import { CotentDetailComponent } from './page/cotent-detail/cotent-detail.component';
+
 
 
 @NgModule({

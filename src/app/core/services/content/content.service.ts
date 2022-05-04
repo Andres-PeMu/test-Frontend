@@ -9,23 +9,14 @@ import { content } from 'src/app/models/content.models';
 export class ContentService {
 
   private contentCollection: AngularFirestoreCollection<content>;
+  data: Array<any> | undefined = [];
+  content : Array<any> | undefined = []
 
   constructor(
         private readonly afs: AngularFirestore,
     ) {
     this.contentCollection = afs.collection<content>('Contents');
   }
-
-
-  // getContent(){
-  //   return this.contentCollection.snapshotChanges().pipe(
-  //     map(actions => {
-  //       return actions.map(a => ({
-  //       data: a.payload.doc.data() as content
-  //     }))
-  //   })
-  //   )
-  // }
 
   getContent(){
     return this.contentCollection.snapshotChanges().pipe(

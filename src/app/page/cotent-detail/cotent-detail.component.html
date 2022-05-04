@@ -1,1 +1,15 @@
-<p>cotent-detail works!</p>
+<mat-card class="example-card" *ngIf="content.title != undefined">
+  <mat-card-title-group>
+    <mat-card-title *ngIf="content.title">{{ content.title }}</mat-card-title>
+    <mat-card-subtitle *ngIf="content.creationDate">Creado: {{(content.creationDate)}}</mat-card-subtitle>
+    <mat-card-subtitle *ngIf="content.creationDate">finaliza: {{content.creationDate}}</mat-card-subtitle>
+    <img *ngIf="content.img" mat-card-lg-image [src]="content.img" >
+  </mat-card-title-group>
+  <mat-card-content>
+    <p *ngIf="content.detailedDescription">  {{content.detailedDescription}}</p>
+    <p *ngIf="content.state" >  {{content.state}}</p>
+    <section>
+      <a mat-stroked-button href="https://www.google.com/" target="_blank" color="primary">Ir a la pagina</a>
+    </section>
+  </mat-card-content>
+</mat-card>

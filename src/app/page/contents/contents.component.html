@@ -12,7 +12,7 @@
     <mat-card-actions>
       <section>
         <a mat-stroked-button href="https://www.google.com/" target="_blank" color="primary">Ir a la pagina</a>
-        <button mat-stroked-button color="primary">Ver detalle</button>
+        <button mat-stroked-button color="primary" [routerLink]="['/contents/', content.id]">Ver detalle</button>
       </section>
     </mat-card-actions>
   </mat-card>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import { ContentService } from './../../core/services/content/content.service';
+import { content } from './../../models/content.models';
 
 @Component({
   selector: 'app-cotent-detail',
@@ -8,11 +10,23 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class CotentDetailComponent implements OnInit {
 
+  contents: Array<any> | undefined = [];
+  content: content | undefined;
+
   constructor(
-    private activatedRoute:ActivatedRoute
+    private route:ActivatedRoute,
+    private contentService:ContentService
   ) { }
 
   ngOnInit(): void {
+    this.contentService.getContent().subscribe(content=> {
+      content.forEach(content => this.contents!.push(content.data))
+      this.route.params.subscribe((params: Params)=>{
+        const id = params['id'];
+        this.content = this.contents?.find(content => id === content.id)
+        console.log(this.content)
+      })
+    })
   }
 
 }
