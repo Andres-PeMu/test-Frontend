@@ -16,19 +16,30 @@ export class ContentService {
     this.contentCollection = afs.collection<content>('Contents');
   }
 
+
+  // getContent(){
+  //   return this.contentCollection.snapshotChanges().pipe(
+  //     map(actions => {
+  //       return actions.map(a => ({
+  //       data: a.payload.doc.data() as content
+  //     }))
+  //   })
+  //   )
+  // }
+
   getContent(){
     return this.contentCollection.snapshotChanges().pipe(
-      map(actions => actions.map(a => {
+      map(actions =>
+        actions.map(a => {
         const data = a.payload.doc.data() as content;
-        const id = a.payload.doc.id;
-        return { id, ...data };
+        return { data };
       }))
-    );
+    )
   }
 
   addContent(content:content){
     const id = this.afs.createId();
-    const item = { id, content };
+    const item = { id, ...content };
     return this.contentCollection.add(item);
   }
 

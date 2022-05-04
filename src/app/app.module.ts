@@ -21,6 +21,7 @@ import { ContentsComponent } from './page/contents/contents.component';
 import { ContactComponent } from './page/contact/contact.component';
 import { NotFoundComponent } from './page/not-found/not-found.component';
 import { LayoutComponent } from './components/layout/layout.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 import { environment } from './../environments/environment';
@@ -49,6 +50,7 @@ import { environment } from './../environments/environment';
     AngularFireStorageModule,
     FormsModule,
     AuthModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
