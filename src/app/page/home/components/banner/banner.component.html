@@ -1,7 +1,17 @@
 <div class="swiper-container">
   <div class="swiper-wrapper">
-    <div class="swiper-slide" *ngFor="let img of images">
+    <div class="swiper-slide shape-container" *ngFor="let img of images">
       <img [src]="img" alt="imagen de banner">
+      <div class="generator">
+        <div class="shape">
+          <p class="sport">Deporte</p>
+          <p class="music">Musica</p>
+          <p class="Technology">Tecnologia</p>
+          <p class="Films">Peliculas</p>
+          <p class="News">Noticias</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+

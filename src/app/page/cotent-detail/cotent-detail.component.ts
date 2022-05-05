@@ -36,4 +36,8 @@ export class CotentDetailComponent implements OnInit {
     {name: 'Noticias', abbreviation: 'Ncias'},
   ];
 
+  seen(content: any){
+    console.log(content)
+    content.seen = !content.seen;
+  }
 }
