@@ -24,7 +24,7 @@
     </mat-card-content>
     <mat-card-actions>
       <section>
-        <a mat-stroked-button href="https://www.google.com/" target="_blank" color="primary" (click)="seen(content)">Ir a la pagina</a>
+        <a mat-stroked-button [href]="content.link" target="_blank" color="primary" (click)="seen(content)">Ir a la pagina</a>
         <button mat-stroked-button color="primary" [routerLink]="['/contents/', content.id]">Ver detalle</button>
         <p *ngIf="content.seen">visto</p>
       </section>
@@ -44,7 +44,7 @@
     </mat-card-content>
     <mat-card-actions>
       <section>
-        <a mat-stroked-button href="https://www.google.com/" target="_blank" color="primary" (click)="seen(content)">Ir a la pagina</a>
+        <a mat-stroked-button [href]="content.link" target="_blank" color="primary" (click)="seen(content)">Ir a la pagina</a>
         <button mat-stroked-button color="primary" [routerLink]="['/contents/', content.id]">Ver detalle</button>
       </section>
     </mat-card-actions>
