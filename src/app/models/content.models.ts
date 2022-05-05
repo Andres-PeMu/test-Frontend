@@ -6,6 +6,6 @@ export interface content{
   detailedDescription?: string;
   link?: string;
   state?: string;
-  creationDate?: Date;
-  finisDate?: Date;
+  creationDate?: string;
+  finisDate?: string;
 }

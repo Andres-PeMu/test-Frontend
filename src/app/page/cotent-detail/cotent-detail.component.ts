@@ -24,9 +24,16 @@ export class CotentDetailComponent implements OnInit {
       this.route.params.subscribe((params: Params)=>{
         const id = params['id'];
         this.content = this.contents?.find(content => id === content.id)
-        console.log(this.content)
       })
     })
   }
+
+  states = [
+    {name: 'Deporte', abbreviation: 'Dte'},
+    {name: 'Musica', abbreviation: 'Mca'},
+    {name: 'Tecnologia', abbreviation: 'Tgia'},
+    {name: 'Peliculas', abbreviation: 'Plas'},
+    {name: 'Noticias', abbreviation: 'Ncias'},
+  ];
 
 }

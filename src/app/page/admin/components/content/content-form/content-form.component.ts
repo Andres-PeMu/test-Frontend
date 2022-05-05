@@ -66,7 +66,8 @@ export class ContentFormComponent {
   onSubmit(event:Event): void {
     event.preventDefault();
     this.addressForm.value.img = this.image;
-    this.addressForm.value.creationDate = new Date();
+    this.addressForm.value.creationDate = new Date().toString();
+    this.addressForm.value.finisDate = this.addressForm.value.finisDate.toString()
     const content = this.addressForm.value;
     console.log(this.addressForm.value)
     this.contentService.addContent(content)

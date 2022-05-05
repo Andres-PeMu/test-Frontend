@@ -14,6 +14,7 @@ import { SharedModule } from './shared/shared.module'
 import { CoreModule } from './core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthModule } from './page/auth/auth.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { CartComponent } from './components/cart/cart.component';
@@ -23,6 +24,8 @@ import { NotFoundComponent } from './page/not-found/not-found.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import {MatSelectModule} from '@angular/material/select';
+
 import { CotentDetailComponent } from './page/cotent-detail/cotent-detail.component';
 
 
@@ -56,6 +59,8 @@ import { environment } from './../environments/environment';
     AuthModule,
     MatCardModule,
     MatButtonModule,
+    MatSelectModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

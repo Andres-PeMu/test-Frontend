@@ -1,4 +1,36 @@
-<div class="card">
+<form>
+  <div class="row">
+    <div class="col">
+      <mat-form-field class="full-width">
+        <mat-select placeholder="Seleccione la categoria a filtrar" [(ngModel)]="selectedValue" name="state" (selectionChange)="SelectCategory($event.value)">
+          <mat-option *ngFor="let state of states" [value]="state.name">
+            {{ state.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+</form>
+<div class="card" *ngIf="content">
+  <mat-card class="example-card" *ngFor="let content of contentNew">
+    <mat-card-header>
+      <mat-card-title>{{content.title}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="content.img" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>
+        {{content.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <section>
+        <a mat-stroked-button href="https://www.google.com/" target="_blank" color="primary">Ir a la pagina</a>
+        <button mat-stroked-button color="primary" [routerLink]="['/contents/', content.id]">Ver detalle</button>
+      </section>
+    </mat-card-actions>
+  </mat-card>
+</div>
+<div class="card" *ngIf="!content">
   <mat-card class="example-card" *ngFor="let content of contents">
     <mat-card-header>
       <mat-card-title>{{content.title}}</mat-card-title>

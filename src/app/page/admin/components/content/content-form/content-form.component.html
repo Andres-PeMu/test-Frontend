@@ -54,7 +54,7 @@
         <div class="col">
           <mat-form-field class="full-width">
             <mat-select placeholder="Categoria" formControlName="state">
-              <mat-option *ngFor="let state of states" [value]="state.abbreviation">
+              <mat-option *ngFor="let state of states" [value]="state.name">
                 {{ state.name }}
               </mat-option>
             </mat-select>
