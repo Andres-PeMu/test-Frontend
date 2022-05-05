@@ -8,4 +8,5 @@ export interface content{
   state?: string;
   creationDate?: string;
   finisDate?: string;
+  seen?:boolean;
 }

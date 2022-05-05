@@ -44,6 +44,7 @@ export class ContentFormComponent {
       state: [null, Validators.required],
       creationDate: [null],
       finisDate: [null],
+      seen:[false]
     });
 
     uploadFile(event: Event){
